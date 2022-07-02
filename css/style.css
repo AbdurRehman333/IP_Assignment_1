@@ -1,0 +1,42 @@
+.main_form{
+    text-align: -webkit-center;
+}
+/* #outer_div_form{
+    display: flex; place-content: center;
+}
+#result_info_div{
+    margin-left:30%;
+} */
+
+input{
+    font-size:16px;
+}
+#submit_button{
+    padding:15px;
+    width: 33%;
+    background:#65AD5C;
+}
+
+.block{
+    display : block !important;
+}
+#err_no_1{
+    color: red;
+    display:none;
+    text-align: -webkit-center;
+}
+#err_no_2{
+    color: red;
+    display:none;
+    text-align: -webkit-center;
+}
+#err_no_3{
+    color: red;
+    display:none;
+    text-align: -webkit-center;
+}
+#err_no_4{
+    color: red;
+    display:none;
+    text-align: -webkit-center;
+}

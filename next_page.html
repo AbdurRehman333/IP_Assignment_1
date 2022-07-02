@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Data</title>
+</head>
+
+<body>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        /* tr:nth-child(even) {
+            background-color: #dddddd;
+        } */
+        /* Other  */
+        
+        #heading {
+            text-align: center;
+        }
+        
+        #table_one {
+            width: 45%;
+        }
+        
+        #table_one_div {
+            text-align: -webkit-center;
+        }
+        
+        #table_two {
+            width: 45%;
+        }
+        
+        #table_two_div {
+            text-align: -webkit-center;
+            margin-top: 3rem;
+        }
+    </style>
+
+    <script>
+        const queryString = window.location.search;
+        // console.log(queryString);
+
+        const urlParams = new URLSearchParams(queryString);
+
+        const name = urlParams.get('name');
+        // console.log(name);
+        // element.innerHTML = name;
+
+        const father_name = urlParams.get('father_name');
+        // console.log(father_name);
+
+        const phone = urlParams.get('phone');
+        // console.log(phone);
+
+        const email = urlParams.get('email');
+        // console.log(email);
+
+        const instituion = urlParams.get('instituion');
+        // console.log(instituion);
+
+        const discipline = urlParams.get('discipline');
+        // console.log(discipline);
+
+        //SUBJECTS
+        const subject_1_name = urlParams.get('1_name');
+        // console.log(subject_1_name);
+        const subject_1_total = urlParams.get('1_total');
+        // console.log(subject_1_total);
+        const subject_1_obtained = urlParams.get('1_obtained');
+        // console.log(subject_1_obtained);
+
+        const subject_2_name = urlParams.get('2_name');
+        // console.log(subject_2_name);
+        const subject_2_total = urlParams.get('2_total');
+        // console.log(subject_2_total);
+        const subject_2_obtained = urlParams.get('2_obtained');
+        // console.log(subject_2_name);
+
+        const subject_3_name = urlParams.get('3_name');
+        // console.log(subject_3_name);
+        const subject_3_total = urlParams.get('3_total');
+        // console.log(subject_3_total);
+        const subject_3_obtained = urlParams.get('3_obtained');
+        // console.log(subject_3_obtained);
+
+        const subject_4_name = urlParams.get('4_name');
+        // console.log(subject_4_name);
+        const subject_4_total = urlParams.get('4_total');
+        // console.log(subject_4_total);
+        const subject_4_obtained = urlParams.get('4_obtained');
+        // console.log(subject_4_obtained);
+    </script>
+
+
+    <script>
+        window.onload = function() {
+            // alert(1)
+            var element = document.getElementById('name');
+            // console.log(element);
+            element.innerHTML = name;
+
+            var element = document.getElementById('father_name');
+            // console.log(element);
+            element.innerHTML = father_name;
+            var element = document.getElementById('phone');
+            // console.log(element);
+            element.innerHTML = phone;
+            var element = document.getElementById('email');
+            // console.log(element);
+            element.innerHTML = email;
+            var element = document.getElementById('institution');
+            // console.log(element);
+            element.innerHTML = instituion;
+            var element = document.getElementById('discipline');
+            // console.log(element);
+            element.innerHTML = discipline;
+
+
+            var total_total = 0;
+            var obtained_total = 0;
+
+            for (let i = 1; i < 5; i++) {
+
+                if (i == 1) {
+                    name_to_set = subject_1_name;
+                    total_to_set = subject_1_total;
+                    obtained_to_set = subject_1_obtained;
+                }
+                if (i == 2) {
+                    name_to_set = subject_2_name;
+                    total_to_set = subject_2_total;
+                    obtained_to_set = subject_2_obtained;
+                }
+                if (i == 3) {
+                    name_to_set = subject_3_name;
+                    total_to_set = subject_3_total;
+                    obtained_to_set = subject_3_obtained;
+                }
+                if (i == 4) {
+                    name_to_set = subject_4_name;
+                    total_to_set = subject_4_total;
+                    obtained_to_set = subject_4_obtained;
+                }
+
+
+                total_total += parseInt(total_to_set);
+                obtained_total += parseInt(obtained_to_set);
+                // console.log(total_total);
+
+
+                var element = document.getElementById(`subject_${i}_name`);
+                // console.log(element);
+                // element.innerHTML = subject_1_name;
+                element.innerHTML = name_to_set;
+
+                var element = document.getElementById(`subject_${i}_total`);
+                // console.log(element);
+                // element.innerHTML = subject_1_total;
+                element.innerHTML = total_to_set;
+
+                var element = document.getElementById(`subject_${i}_obtained`);
+                // console.log(element);
+                // element.innerHTML = subject_1_obtained;
+                element.innerHTML = obtained_to_set;
+            }
+
+            var element = document.getElementById('total_total');
+            element.innerHTML = total_total;
+            var element = document.getElementById('obtianed_total');
+            element.innerHTML = obtained_total;
+
+
+
+        };
+    </script>
+
+
+    <div id="show">
+
+        <!-- <div id="name"></div> -->
+        <h1 id="heading">Student Record</h1>
+
+
+        <div id="table_one_div">
+            <table id="table_one">
+
+                <tr>
+                    <td>Name</td>
+                    <td id="name">...</td>
+                </tr>
+                <tr>
+                    <td>Father's Name</td>
+                    <td id="father_name">...</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td id="phone">...</td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td id="email">...</td>
+                </tr>
+                <tr>
+                    <td>instituion</td>
+                    <td id="institution">...</td>
+                </tr>
+                <tr>
+                    <td>discipline</td>
+                    <td id="discipline">...</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+    </div>
+
+
+
+    <div id="table_two_div">
+        <table id="table_two">
+            <tr>
+                <th>Subject #</th>
+                <th>Name</th>
+                <th>Total</th>
+                <th>Obtained</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td id="subject_1_name">...</td>
+                <td id="subject_1_total">...</td>
+                <td id="subject_1_obtained">...</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td id="subject_2_name">...</td>
+                <td id="subject_2_total">...</td>
+                <td id="subject_2_obtained">...</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td id="subject_3_name">...</td>
+                <td id="subject_3_total">...</td>
+                <td id="subject_3_obtained">...</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td id="subject_4_name">...</td>
+                <td id="subject_4_total">...</td>
+                <td id="subject_4_obtained">...</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="">Total</td>
+                <td id="total_total">...</td>
+                <td id="obtianed_total">...</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
