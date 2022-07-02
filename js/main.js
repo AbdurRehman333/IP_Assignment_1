@@ -8,6 +8,83 @@ function beforeSubmit() {
             error = true;
         }
     }
+
+
+    //Check Empty
+    var element = document.getElementById('name').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('father_name').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('phone').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('email').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('instituion').value;
+    if (element == '') {
+        error = true;
+    }
+
+    //EMPTY CHECK
+
+
+    element = document.getElementById('1_name').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('1_total').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('1_obtained').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('2_name').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('2_total').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('2_obtained').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('3_name').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('3_total').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('3_obtained').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('4_name').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('4_total').value;
+    if (element == '') {
+        error = true;
+    }
+    element = document.getElementById('4_obtained').value;
+    if (element == '') {
+        error = true;
+    }
+
+
     //Error Check
     if (error) {
         // Nothing Happends
