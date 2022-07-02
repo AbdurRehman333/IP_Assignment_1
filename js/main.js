@@ -8,7 +8,7 @@ function beforeSubmit() {
             error = true;
         }
     }
-
+    alert(1);
 
     //Check Empty
     var element = document.getElementById('name').value;
